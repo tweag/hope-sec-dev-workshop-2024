@@ -5,7 +5,7 @@ In Part 1 we look at a variety of technologies that can be used to improve secur
 
 A number of technologies are used during this part of the workshop including:
 
-1. SonarLint: https://docs.sonarsource.com/sonarcloud/improving/sonarlint/
+1. SonarLint: https://docs.sonarsource.com/sonarcloud/improving/sonarlint/ 
 
 2. VSCode: https://code.visualstudio.com/
 
@@ -21,15 +21,33 @@ A number of technologies are used during this part of the workshop including:
 
 8. BFG repo-cleaner: https://rtyley.github.io/bfg-repo-cleaner/ 
 
-These can be downloaded/setup in advance of completing the workshop, or as you go. Some applications such as BFG also require you to be able to execute Java on your machine. 
+For this workshop there are two approaches you can take. The first is to use a GitHub Codespace. This is the recommended approach on the day for the workshop as it avoids any installation/setup issues.The second approach is to configure the tooling locally on youy laptop. This may be better suited for after the workhop, when you revisit the material. 
 
-Examples in this workshop use commandline prompts that should work on Linux, MacOS and Windows Subsystem for Linux (WSL)
+We have provided setup scripts for using the Codespace during the workshop. This avoids the issues with having to install packages locally on your laptop and battle configuration settings. You can also use VS Code with CodeSpaces, more info on this can be found here:
 
-The first account you will need if you have not created it already is a GitHub one. Use the link above to sign up.
+https://docs.github.com/en/codespaces/developing-in-a-codespace/using-github-codespaces-in-visual-studio-code
+
+Examples in this workshop use commandline prompts that should work on Linux, MacOS and Windows Subsystem for Linux (WSL) as well as winthin CodeSpaces
+
+The first account you will need if you have not created it already is a GitHub one. You can create an account here: https://github.com 
 
 Once this created, you can now fork this repository.
 
-Follow the instructions below, to fork https://github.com/tweag/dev-sec-ops-workshop
+Follow the instructions below, to fork https://github.com/tweag/hope-sec-dev-workshop-2024
+
+The following instructions are broken out into Codespaces and local setup. As noted, for the workshop on the day at HOPE we recommend following the Codespaces approach. 
+
+## Codespaces Setup
+
+Navigate to the Code tab in your repository. 
+
+Next, select the green Code button which will dispaly a drop down.
+
+Select the Codespaces tab.
+
+Select the `Create codesapce on main` button.
+
+## Local Machine Setup
 
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
 
@@ -62,11 +80,11 @@ Supported IDEs include:
 
 2. Visual Studio 
 
-3. VS Code 
+3. VS Code and VS Code in Codespaces
 
 4. Eclipse 
 
-During this workshop we use VS Code for examples, but this can be replaced with the supported IDE 
+During this workshop we use VS Code in Codespace for examples, but this can be replaced with the supported IDE 
 of your choice. 
 
 SonarLint has a number of features including:
@@ -127,6 +145,16 @@ Let's take a look at an alernative tool to SonarLint which can also detect issue
 We're now going to switch over to using another tool that can aid in detecting security issues in our source code. This tool is called CodeQL.
 
 The first step is to install the CLI tools prior to adding in the VS Code plugin.
+
+Instructions for Codespace and local installation are now presented.
+
+
+#### Codespaces
+
+Run the ./codeqlinstall script 
+
+
+#### Local Installation 
 
 GitHub provides instructions here:
 
@@ -190,6 +218,7 @@ codeql-java-consistency-queries (/workshop/qlpacks/codeql/java/ql/consistency-qu
 codeql-swift-tests (/workshop/qlpacks/codeql/swift/ql/test)
 
 ```
+
 Now we have the commandline tool in place we are going to generate a database off of our vulnerable code. This database is an Abstract Syntax Tree representation of the code combined with some metadata about the code base. GitHub provides and overview on the database and using it in VS Code here: https://codeql.github.com/docs/codeql-for-visual-studio-code/exploring-the-structure-of-your-source-code/
 
 
@@ -222,6 +251,9 @@ Finished zipping source archive (247.38 KiB).
 Successfully created database at /workshop/javascript-database.
 
 ```
+
+#### Plugin Installation 
+
 We now have a database generated from our code to work with. However before we can use it via the VS Code IDE we will need to install the plugin.
 
 You can find basic installation instructions for VS Code here:
@@ -229,6 +261,12 @@ You can find basic installation instructions for VS Code here:
 https://codeql.github.com/docs/codeql-for-visual-studio-code/setting-up-codeql-in-visual-studio-code/
 
 Once you have the plugin installed, we can setup a CodeQL workspace.
+
+#### Codespace Workspace setup 
+
+Run the ./workspace_setup.sh script 
+
+#### Locall Installation Workspace setup 
 
 In this workshop we will use the `Starter Workspace`. 
 
@@ -241,6 +279,9 @@ git clone --recursive git@github.com:github/vscode-codeql-starter.git
 ```
 
 Once this has cloned we need to switch back to VS Code. 
+
+
+#### Working with queries
 
 Once in the IDE select `File > Open Workspace from File`
 
