@@ -1,17 +1,18 @@
 
-# Template Repository - Shifting Security Left a Hands On Workshop
+# Mastering Security in Development - H.O.P.E 2024
 
-The following repository contains training material workshops on shifting security left.
+H.O.P.E. stands for Hackers On Planet Earth, one of the oldest hacker events in the world. 
 
-This workshop is held at venue `X` on `DATE` at `TIME`.
+The following repository contains training material workshops on mastring security in the software development process.
+
+This workshop is held at [H.O.P.E 2024 in NYC at St John's University](https://www.hope.net/workshops.html)
+
 
 ## Workshop Outline
 
-*Shifting Security Left a Hands On Workshop* provides participants with an introduction to baking security into the software development process and leveraging DevSecOps tooling to support this. 
+This is a hands-on workshop that provides participants with an introduction to secure software development and leveraging DevSecOps tooling to aid in this. Participants will learn about setting up a local development environment that includes security tooling. Following this, they will progress into learning how to use DevSecOps tooling within GitHub to detect security issues and flag accidentally committed secrets. The workshop will then conclude with a review of how GitHub runners and other features can be used to aid in secure deployments.
 
-Attendees will learn about setting up a local development environment which includes security tools such as IDE plugins. Students will then progress into learning how to use DevSecOps pipelines to detect security issues such as accidentally committed secrets.
-
-The workshop will then wrap up with tips on how to handle secure deployments and a look to what the future holds in this space.
+For the purposes of th workshop the local development environment will leverage GitHub CodeSpaces. 
 
 ## Pre-setup Phase
 
@@ -30,36 +31,34 @@ A full guide to setting up the tooling for this workshop can be found in the Par
 
 ## Part 1: Security within the development environment
 
-Attendees will learn to integrate security tools and pre-commit hooks into their development environment thus enhancing code security off the bat:
+Attendees will learn to integrate security plugins and pre-commit hooks into their development environment, including IDE:
 
-1. 3rd party plugin integration. In this part of the talk we explore third-party tooling that can be integrated into the IDE to aid in linting and SAST. An example here includes the SonarLint plugin. We also look at CodeQL and GitHub Copilot [Part 1 - Module1: IDE Integration](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part1#module-1-ide-integration)
+1. In this section, we will explore how third-party tools can be integrated into the IDE to enhance linting and Static Application Security Testing (SAST). For instance, the SonarLint plugin provides valuable linting capabilities. Additionally, we will examine the use of CodeQL and GitHub Copilot. [Part 1 - Module1: IDE Integration](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part1#module-1-ide-integration)
 
-2. Setting up pre-commit hooks to aid in security will be explored. This includes tools such as AWS Labs git-secrets and Talisman. [Part 1 - Module2: pre-commit Hooks](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part1#module-2-pre-commit-hooks)
+2. We will explore setting up pre-commit hooks to enhance security. This includes utilizing tools like AWS Labs' git-secrets and Talisman. [Part 1 - Module2: pre-commit Hooks](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part1#module-2-pre-commit-hooks)
 
-3. Git ignores. Git ignore files are a great way of preventing config files which may contain secrets, and other undesirable files such as .zips accidentally being committed. In this portion of the talk we provide practical examples of using .gitignore to aid in security. [Part 1 - Module 3: Preventing accidental commits](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part1#module-3-preventing-accidental-commits)
+3.Git ignore files are an effective way to prevent the accidental commitment of configuration files that may contain secrets, as well as other undesirable files like .zips. In this part of the talk, we will provide practical examples of using .gitignore to enhance security. [Part 1 - Module 3: Preventing accidental commits](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part1#module-3-preventing-accidental-commits)
 
 
 ## Part 2: Repository Scanning
 
-Here we cover some repository scanning techniques, including secrets scanning and vulnerability detection, using tools like GitHub's dependabot and Tartufo.
+In this section, we will cover various repository scanning techniques, including secrets scanning and vulnerability detection. We will utilize tools such as GitHub's Dependabot and Tartufo.
 
-1. Secrets scanning. A demonstration of how secret scanning can be performed in the source code. This includes examples of Tartufo/TruffleHog, GitHub's tooling and Horusec. [Part 2 - Module 4:Secrets Scanning](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-4secrets-scanning)
+1. This section will demonstrate how to perform secret scanning in the source code. We will include examples using tools such as Tartufo/TruffleHog, GitHub's secret scanning tools, and Horusec. [Part 2 - Module 4:Secrets Scanning](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-4secrets-scanning)
 
-2. Handling secrets in GitHub. GitHub provides users the ability to store secrets such as API keys securely within the SCM, and pull these out at deployment time. Here participants learn the basics of the environment within GitHub and how to leverage GitHub native secret storage mechanisms. We will also discuss other options for storing secrets and pulling them into CI/CD pipelines [Part 2 - Module 5: Handling secrets in GitHub](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-5handling-secrets-in-github)
+2. GitHub offers a secure method for storing secrets, such as API keys, within the source control management system (SCM), allowing them to be accessed during deployment. In this section, participants will learn the basics of the GitHub environment and how to utilize GitHub's native secret storage mechanisms. We will also explore additional options for storing secrets and integrating them into CI/CD pipelines. [Part 2 - Module 5: Handling secrets in GitHub](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-5handling-secrets-in-github)
 
-3. Detecting security vulnerabilities within the repository. Students are introduced to the concept of detecting security vulnerabilities in the source code repository. A general overview of techniques and approaches is given, as well as those specific to GitHub.[Part 2 - Module 6:Detecting Security vulnerabilities](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-5handling-secrets-in-github)
+3. Students will be introduced to the concept of detecting security vulnerabilities in the source code repository. This section provides a general overview of techniques and approaches, with a focus on methods specific to GitHub.[Part 2 - Module 6:Detecting Security vulnerabilities](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-5handling-secrets-in-github)
 
-4. Vulnerable dependency detection. GitHub's dependabot provides a mechanism for analyzing the dependencies associated with a project and understanding if they contain security vulnerabilities. Walkthrough of dependabot is performed. [Part 2 - Module 7:Vulnerable dependencies](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-7vulnerable-dependencies) 
+4. GitHub's Dependabot offers a mechanism for analyzing a project's dependencies to identify potential security vulnerabilities. This section includes a walkthrough of how to use Dependabot for this purpose. [Part 2 - Module 7:Vulnerable dependencies](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-7vulnerable-dependencies) 
 
-5. Static analysis. GitHub Advanced Security contains a GitHub native SAST tool built on CodeQL. This section of the class walks through its feature sets and how it can be integrated into GitHub actions. This section of the talk will also cover Horusec and how it cane be used in the same capacity.[Part 2 - Module 8:Static Analysis](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-8static-analysis)
+5. GitHub Advanced Security includes a native SAST tool built on CodeQL. This section will walk through its features and demonstrate how to integrate it into GitHub Actions. Additionally, we will cover Horusec and how it can be used in a similar capacity. [Part 2 - Module 8:Static Analysis](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-8static-analysis)
 
-6. Branch protection and pull request gating mechanisms. The penultimate topic covered is how branch protection rules and PR gating mechanisms can leverage SAST tools to block pull requests that fail security checks.[Module 9:Branch protection rules](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-9branch-protection-rules)
+6. The penultimate topic focuses on using branch protection rules and pull request gating mechanisms to enhance security. This includes leveraging SAST tools to block pull requests that fail security checks.  [Module 9:Branch protection rules](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-9branch-protection-rules)
 
-7. SBOMs. A final note on SBOMs. These can be used to extract a Software Bill of Materials from your applications stored in GitHub. [Part 2 - Module 10:SBOMs Software Bill of Materials](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-10sboms-software-bill-of-materials)
+7. A final note on Software Bill of Materials (SBOMs): these can be utilized to extract a comprehensive list of components from your applications stored in GitHub. [Part 2 - Module 10:SBOMs Software Bill of Materials](https://github.com/tweag/dev-sec-ops-workshop/tree/main/part2#module-10sboms-software-bill-of-materials)
 
 ## Wrap-up
 
-Discussion of future trends in this space.
-
-Recap of what we've learned
+A quick review of everything we learned in the H.O.P.E Workshop
 
