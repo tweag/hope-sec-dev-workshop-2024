@@ -1,0 +1,13 @@
+fileignoreconfig:
+- filename: part1/README.md
+  checksum: 296322f09011c5d5842a59367be6128832786fab03e2473eaaf7bd1d0401b007
+- filename: part2/VulnerableAppTwo/keys/rsaexample.pem
+  checksum: cc5872d91bc99346267659d9bc7bb2189547f6742edf25bf7b447b04af65d440
+- filename: part2/README.md
+  checksum: dece0d209b83000453119ab7a500465654ed9d5a96a5fbdeb7738a5dd17560d9
+- filename: README.md
+  checksum: d5a9d7377587552896b7ce67ebe4da86bec5c9c753e16c120c7622df01b3a956
+- filename: horusec-config.json
+  checksum: 727c5016cd645828fba85e4e02a5d6d4b0d762a881aadb695333c973b6c03e27
+threshold: medium
+version: ""
