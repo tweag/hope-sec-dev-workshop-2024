@@ -1,3 +1,4 @@
+![HOPE XV Logo](hopexv_logo.png "HOPE XV Logo")
 
 # Mastering Security in Development - H.O.P.E 2024
 
