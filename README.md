@@ -1,6 +1,6 @@
 <div style="color:white">
 ![HOPE XV Logo](hopexv_logo.png "HOPE XV Logo")
-</div>div>
+</div>
 
 # Mastering Security in Development - H.O.P.E 2024
 
