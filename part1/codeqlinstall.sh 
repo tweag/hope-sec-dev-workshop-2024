@@ -1,0 +1,4 @@
+codeql resolve qlpacks
+
+mkdir codeqlfiles && cd codeqlfiles
+./codeql database create --language=javascript-typescript --source-root ../hope-sec-dev-workshop-2024/part1 ../javascript-database
