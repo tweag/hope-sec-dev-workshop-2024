@@ -280,7 +280,9 @@ In the `Search Extensions in Marketplace` field, enter `CodeQL`
 
 Click `Install` next to the `CodeQL` option.
 
-#### Locall Installation Workspace setup 
+You are now ready to experiment with the queries.
+
+#### Local Installation Workspace setup 
 
 In this workshop we will use the `Starter Workspace`. 
 
@@ -292,16 +294,15 @@ git clone --recursive git@github.com:github/vscode-codeql-starter.git
 
 ```
 
-Once this has cloned we need to switch back to VS Code. 
-
-
-#### Working with queries
-
-Once in the IDE select `File > Open Workspace from File`
+Once this has cloned we need to switch back to VS Code and once in the IDE select `File > Open Workspace from File`
 
 Navigate to the folder where you checked out the `vscode-codeql-starter` repository and select the `vscode-codeql-starter.code-workspace` file. 
 
 This will now load the workspace in visual studio. Save any changes if prompted to the `vuln.js` file you edited.
+
+
+#### Working with queries
+
 
 In the left-hand menu you should now see a list of queries.
 
@@ -313,11 +314,20 @@ This demonstrates the format that CodeQL queries are written in. If you scroll d
 
 Under this folder you will find the configuration of JavaScript queries for detecting issues with the code base.
 
+##### CodeSpaces and Opening the DB
+
+Once the plugin is installed you can open our your DB via the `Databases` menu, but scrolling down it to `From a URL (as a zip file)`
+
+##### Local Installation and Opening the DB
 In order to test the queries against our codebase we can now load our database via the `DATABASES` panel in VS Code.
 
 Select the `Choose Database from Folder` option, and select the database we created from the source code.
 
 ![Part 1 - CodeQL DB](./img/codeqldb.png "CodeQL Database example")
+
+
+
+#### Executing Queries 
 
 You can filter the queries in the `QUERIES` panel to only display JavaScript ones, by selecting `JavaScript` from the `LANGUAGE` panel. This should make the query list easier to navigate.
 
@@ -345,9 +355,9 @@ A quick start guide is provided here: https://docs.github.com/en/copilot/quickst
 
 For this course, we are interested in installing the Copilot extension in VS Code.
 
-1. Install the plugin from the marketplace: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot
+1. Install the plugin from the marketplace if you are working locally: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot or from the `Extension` option in VS Code locally or VS Code in CodeSpaces
 
-2. If prompted, open VS Code
+2. If prompted and installing locally, open VS Code
 
 3. Under the `Extension: GitHub Copilot` tab, select `Install`
 
