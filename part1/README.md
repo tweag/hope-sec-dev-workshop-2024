@@ -264,7 +264,9 @@ Once you have the plugin installed, we can setup a CodeQL workspace.
 
 #### Codespace Workspace setup 
 
-Run the ./workspace_setup.sh script 
+We can fork the vscode-codeql-starter repository and run CodeQL as a Codespace frorm here. We can then point CodeQL to our repository.
+
+Run the `codeqldb.sh` file to create a zip and move it into your repository. 
 
 #### Locall Installation Workspace setup 
 
