@@ -436,13 +436,19 @@ You can clone the repository from the following location:
 
 https://github.com/awslabs/git-secrets
 
-The `README` explains a number of mechanisms to install git-secrets based upon your OS.
+The `README` explains a number of mechanisms to install git-secrets based upon your OS. 
+
+For CodeSpaces you can clone to the environment via:
+
+`git clone https://github.com/awslabs/git-secrets.git` inside the `/workspaces` folder.
+
+Then navigate into this and run `sudo make install`
 
 For each repository you will need to install the hooks. Once git-secrets is installed, in this repository install the hooks via:
 
 ```console
 
-git secrets -- install
+git secrets --install
 
 ```
 
