@@ -1,0 +1,29 @@
+{
+    "name": "Default Linux Universal",
+    "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "vscjava.vscode-java-pack",
+                "ms-python.python",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "sonarsource.sonarlint-vscode"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "16"
+        },
+        "ghcr.io/devcontainers/features/docker:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/aws-cli:1": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    "postCreateCommand": "chmod +x .devcontainer/setup.sh && /bin/bash .devcontainer/setup.sh",
+    "remoteUser": "vscode"
+}
