@@ -10,9 +10,9 @@
 				"GitHub.copilot",
 				"GitHub.copilot-chat",
 				"vscjava.vscode-java-pack",
-                "sonarsource.sonarlint-vscode",
-                "dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode",
+                		"sonarsource.sonarlint-vscode",
+                		"dbaeumer.vscode-eslint",
+                		"esbenp.prettier-vscode",
 				"ms-python.python"
 			]
 		}
