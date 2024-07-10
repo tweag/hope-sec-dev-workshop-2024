@@ -12,6 +12,8 @@ One is Java based, and the second is JavaScript. These can be found under:
 
 We will start by looking at how secrets scanning tools can be used against these applications.
 
+The following examples largely take place on the GitHub platform. You can use Codespace for for any commandline prompts, or complete this locally on your machine.
+
 
 ## Module 4:Secrets scanning
 
