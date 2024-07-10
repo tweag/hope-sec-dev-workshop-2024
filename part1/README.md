@@ -510,6 +510,10 @@ The next tool we will look at is Talisman. You can find it at the following GitH
 
 https://github.com/thoughtworks/talisman
 
+For CodeSpaces you can clone to the environment via:
+
+`git clone https://github.com/thoughtworks/talisman.git` inside the `/workspaces` folder.
+
 Talisman is capable of scanning git changesets to ensure secrets and other sensitive information is
 not added to the repository. This includes not only AWS API Keys, but SSH keys, tokens, passwords and similar.
  
@@ -642,13 +646,13 @@ So what happens if we have already commited a file, or somebody not following be
 Let's look at an example.
 
 
-### BFG to clean up accidental commits
+### BFG to clean up accidental commits 
 
 In some cases a file may already exist in the commit history that we need to remove. This could have been due to a disabled pre-commit hook, a file or pattern that wasn't caught, or a file added prior to the introduction of DevSecOps processes.
 
 In order to clean up historical commits we can use BFG. Let's try an experiment to demonstrate this. 
 
-If you haven't downloaded/installed BFG yet, you can find it here:
+The BFG Repo cleaner tool is pre-installed into the workspaces dev container. If you are working locally and haven't downloaded/installed BFG yet, you can find it here:
 
 https://rtyley.github.io/bfg-repo-cleaner/
 
@@ -678,7 +682,6 @@ We are now going to demonstrate how a mistake can happen that needs to be cleane
 ```console
 git commit -m"Adding the .env file so we can demonstrate BFG"
 ```
-
 
 Now push this commit to your fork.
 
