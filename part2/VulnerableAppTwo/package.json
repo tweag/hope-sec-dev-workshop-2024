@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "express": "4.16.0", // Known to have vulnerabilities in this version
-    "lodash": "4.17.10", // Vulnerable version
+    "lodash": "4.17.21", // Vulnerable version
     "marked": "0.3.6", // Vulnerable version
     "mongoose": "5.0.16", // Known vulnerabilities in this version
     "request": "2.81.0" // Deprecated and has known vulnerabilities
