@@ -652,16 +652,26 @@ In some cases a file may already exist in the commit history that we need to rem
 
 In order to clean up historical commits we can use BFG. Let's try an experiment to demonstrate this. 
 
-The BFG Repo cleaner tool is pre-installed into the workspaces dev container. If you are working locally and haven't downloaded/installed BFG yet, you can find it here:
+The BFG Repo cleaner tool is pre-installed into the workspaces dev container. It can be accessed from `java -jar /usr/local/bin/bfg`
+
+If you are working locally and haven't downloaded/installed BFG yet, you can find it here:
 
 https://rtyley.github.io/bfg-repo-cleaner/
 
 The `bfg` command used later in this example is an alias for calling the BFG .jar file:
 
+Locally for example this would be:
+
 ```console
 
 java -jar bfg.jar
 
+```
+
+And in the Codespace:
+
+```console
+java -jar /usr/local/bin/bfg
 ```
 
 You can add an alias to your `.bash_profile` or `.zshrc` file:

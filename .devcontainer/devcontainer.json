@@ -16,7 +16,7 @@
 				"ms-python.python"
 			]
 		}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -31,7 +31,7 @@
 	// "customizations": {},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
-    //"postCreateCommand": "chmod +x .devcontainer/setup.sh && /bin/bash .devcontainer/setup.sh",
-    //"remoteUser": "vscode"
+	// "remoteUser": "root",
+	
+	"postCreateCommand": "chmod +x .devcontainer/setup.sh && /bin/bash .devcontainer/setup.sh"
 }
