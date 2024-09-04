@@ -4,6 +4,8 @@
 
 </div>
 
+This repository is now a public archive. Please use the content as needed for your own courses.
+
 # Mastering Security in Development - H.O.P.E 2024
 
 H.O.P.E. stands for Hackers On Planet Earth, one of the oldest hacker events in the world. 
